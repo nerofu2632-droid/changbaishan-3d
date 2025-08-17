@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Changbaishan 3D · 温湿度补全 MVP</title>
+  <link rel="icon" href="data:," />
+  <link href="https://cdn.jsdelivr.net/npm/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- 左上：控制面板 -->
+  <div id="ui">
+    <div class="title">长白山 · 3D 地图</div>
+    <div class="row">
+      <button id="btnLoad">加载地图</button>
+      <button id="btnFly" class="ghost">飞到长白山</button>
+    </div>
+    <div class="row">
+      <button id="btnAdd" class="ghost">➕ 添加锚点</button>
+      <button id="btnGen">生成温度场</button>
+      <button id="btnClear" class="ghost">清空</button>
+    </div>
+    <div id="msg" class="small"></div>
+  </div>
+
+  <!-- 右下：温度图例（可拖拽） -->
+  <div id="legend" class="legend" style="display:none">
+    <div class="legend-header" title="按住拖动">☰ 温度(℃)</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:4px">
+      <div class="small" id="rng">—</div>
+      <div class="small"><span id="minLab">冷</span> — <span id="maxLab">热</span></div>
+    </div>
+    <div class="bar"></div>
+    <div class="small" id="cbVal">天池：— ℃，湿度：— %（海拔：— m）</div>
+    <div id="warn" class="warn" style="display:none"></div>
+  </div>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

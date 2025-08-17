@@ -1,0 +1,36 @@
+# === secrets & env ===
+.env
+*.env
+.env.*
+!.env.example
+
+# === Python / backend ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.venv/
+venv/
+ENV/
+.mypy_cache/
+.pytest_cache/
+.coverage
+dist/
+build/
+
+# === Node / frontend ===
+node_modules/
+.next/
+out/
+dist/
+build/
+*.log
+#（说明：package-lock.json / pnpm-lock.yaml / yarn.lock 建议保留提交，这里不忽略）
+
+# === IDE / OS ===
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
